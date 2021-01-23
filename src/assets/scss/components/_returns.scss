@@ -1,0 +1,120 @@
+.returns {
+  position: relative;
+
+  &__map {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  &__content {
+    padding: 150px 0 300px 0;
+    position: relative;
+    z-index: 2;
+    @include r(1440) {
+      padding: 120px 0 250px 0;
+    }
+
+    @include r(970) {
+      padding: 75px 0 150px 0;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include r(970) {
+      display: block;
+    }
+
+    p {
+      max-width: 600px;
+      width: 100%;
+      line-height: 1.5;
+      @include r(1200) {
+        max-width: 560px;
+      }
+      @include r(1100) {
+        max-width: 480px;
+      }
+      @include r(970) {
+        margin-top: 35px;
+      }
+    }
+  }
+
+  &__holder {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include r(1440) {
+      margin-top: 80px;
+    }
+    @include r(970) {
+      margin-top: 65px;
+    }
+    @include r(970) {
+      display: block;
+    }
+
+  }
+
+  &__lside {
+    flex: 0 0 auto;
+    max-width: 385px;
+    width: 100%;
+    @include r(1200) {
+      max-width: 360px;
+    }
+
+    p {
+      margin-top: 38px;
+    }
+  }
+
+  &__address {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    backdrop-filter: blur(20px);
+    padding: 90px;
+    font-family: Neue Montreal;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fff;
+    @include r(1200) {
+      padding: 70px;
+    }
+    @include r(970) {
+      font-size: 18px;
+    }
+  }
+
+  &__rside {
+    flex: 0 0 auto;
+    max-width: 600px;
+    width: 100%;
+    padding-top: 60px;
+    border-top: 4px solid #fff;
+    @include r(1200) {
+      max-width: 560px;
+    }
+    @include r(1100) {
+      max-width: 480px;
+    }
+    @include r(970) {
+      max-width: 100%;
+      margin-top: 90px;
+    }
+
+  }
+}

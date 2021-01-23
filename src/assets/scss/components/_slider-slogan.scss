@@ -1,0 +1,150 @@
+.slider-slogan {
+  background-color: rgba(#fff, .05);
+  overflow: hidden;
+  padding-top: 150px;
+
+  @include r(970) {
+    padding-top: 75px;
+  }
+
+  &__content {
+    margin-top: 70px;
+    padding: 56px 0 300px 0;
+    position: relative;
+    @include r(1600) {
+      padding-bottom: 250px;
+    }
+    @include r(1440) {
+      padding-bottom: 200px;
+    }
+    @include r(970) {
+      padding: 60px 0 150px 0;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      width: 150px;
+      height: 150px;
+      background: {
+        image: url("#{$images-path}/icon-all-in-formul.svg");
+        repeat: no-repeat;
+        size: contain;
+      }
+      z-index: 2;
+      animation: spin 8s linear infinite;
+
+      @include r(970) {
+        width: 100px;
+        height: 100px;
+        top: -50px;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 125px;
+      height: 4px;
+      background-color: #fff;
+      @include r(970) {
+        width: 87px;
+        height: 3px;
+      }
+    }
+
+    p {
+      max-width: 730px;
+      line-height: 1.5;
+    }
+  }
+
+  &__container {
+    display: block;
+    padding: 0 17vw;
+
+    @include r(1600) {
+      padding: 0 15vw;
+    }
+    @include r(1440) {
+      padding: 0 12vw;
+    }
+    @include r(970) {
+      padding: 0 17vw;
+    }
+    @include r(767) {
+      padding: 0 15vw;
+    }
+    @include r(600) {
+      padding: 0 11vw;
+    }
+    @include r(550) {
+      padding: 0 9vw;
+    }
+    @include r(400) {
+      padding: 0 30px;
+    }
+
+    .swiper-slide {
+
+      &.swiper-slide-active {
+        .slider-slogan__title {
+          -webkit-text-stroke: 1px #fff;
+          color: transparent;
+        }
+      }
+    }
+  }
+
+  &__title {
+    display: block;
+    text-align: center;
+    font-family: Teko;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 140px;
+    line-height: 1.4;
+    color: #fff;
+    transition-property: color, -webkit-text-stroke;
+    white-space: nowrap;
+
+    @include r(1700) {
+      font-size: 130px;
+    }
+    @include r(1600) {
+      font-size: 130px;
+    }
+    @include r(1500) {
+      font-size: 120px;
+    }
+    @include r(1400) {
+      font-size: 110px;
+    }
+    @include r(1300) {
+      font-size: 100px;
+    }
+    @include r(1200) {
+      font-size: 90px;
+    }
+    @include r(1100) {
+      font-size: 80px;
+    }
+    @include r(1023) {
+      font-size: 70px;
+    }
+    @include r(900) {
+      font-size: 60px;
+    }
+    @include r(767) {
+      font-size: 50px;
+    }
+    @include r(550) {
+      white-space: inherit;
+      line-height: 1.2;
+    }
+  }
+}

@@ -1,0 +1,275 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  display: flex;
+  height: 80px;
+  z-index: 11;
+
+  @include r(1440) {
+    height: 70px;
+  }
+  @include r(1023) {
+    height: 60px;
+  }
+
+  &__burger {
+    display: block;
+    width: 80px;
+    height: 100%;
+    position: relative;
+    border-right: 1px solid rgba(#fff, .15);
+    border-bottom: 1px solid rgba(#fff, .15);
+    flex: 0 0 auto;
+    cursor: pointer;
+    transition-property: border-bottom-color;
+    transition-duration: .3s;
+    @include r(1440) {
+      width: 70px;
+    }
+    @include r(1023) {
+      width: 60px;
+    }
+
+    &:hover {
+      border-bottom-color: #fff;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 30px;
+      height: 1px;
+      top: 36px;
+      left: 50%;
+      margin-left: -15px;
+      background-color: #fff;
+      transition-property: transform;
+      transition-duration: .3s;
+      @include r(1440) {
+        top: 31px;
+      }
+      @include r(1023) {
+        top: 26px;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 30px;
+      height: 1px;
+      bottom: 35px;
+      left: 50%;
+      margin-left: -15px;
+      background-color: #fff;
+      transition-property: transform;
+      transition-duration: .3s;
+      @include r(1440) {
+        bottom: 31px;
+      }
+      @include r(1023) {
+        bottom: 26px;
+      }
+    }
+
+    &.is-open {
+      &::before {
+        transform: rotate(45deg) translate(1px, 3px);
+
+        @include r(1440) {
+          transform: rotate(45deg) translate(1px, 2px);
+        }
+      }
+
+      &::after {
+        transform: rotate(-45deg) translate(2px, -4px);
+        @include r(1440) {
+          transform: rotate(-45deg) translate(2px, -3px);
+        }
+      }
+    }
+  }
+
+  &__link {
+    font-family: Neue Montreal;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 80px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #fff;
+    flex: 1 1 auto;
+    border-right: 1px solid rgba(#fff, .15);
+    border-bottom: 1px solid rgba(#fff, .15);
+    transition-property: border-bottom-color;
+    transition-duration: .3s;
+
+    @include r(1440) {
+      line-height: 70px;
+    }
+    @include r(1023) {
+      display: none;
+    }
+
+    &:hover {
+      border-bottom-color: #fff;
+    }
+
+    &.is-active {
+      border-bottom-color: #fff;
+    }
+  }
+
+  &__logo {
+    flex: 1 1 auto;
+    border-right: 1px solid rgba(#fff, .15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(#fff, .15);
+    transition-property: border-bottom-color;
+    transition-duration: .3s;
+
+    &:hover {
+      border-bottom-color: #fff;
+    }
+
+    img {
+      max-width: 180px;
+      width: 100%;
+
+      @include r(1440) {
+        max-width: 160px;
+      }
+
+      @include r(767) {
+        max-width: 150px;
+      }
+    }
+  }
+
+  &__languages {
+    width: 80px;
+    flex: 0 0 auto;
+    border-left: 1px solid rgba(#fff, .15);
+    cursor: pointer;
+    border-bottom: 1px solid rgba(#fff, .15);
+    transition-property: border-bottom-color;
+    transition-duration: .3s;
+    @include r(1440) {
+      width: 70px;
+    }
+    @include r(1023) {
+      display: none;
+    }
+
+    &:hover {
+      border-bottom-color: #fff;
+    }
+  }
+
+  &__trynow {
+    display: flex;
+    flex: 1 1 auto;
+    max-width: 190px;
+    align-items: center;
+    justify-content: center;
+    font-family: Teko;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    padding-top: 4px;
+    color: #fff;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(#fff, .15);
+    transition-property: border-bottom-color;
+    transition-duration: .3s;
+
+    @include r(1600) {
+      font-size: 24px;
+    }
+    @include r(1300) {
+      font-size: 22px;
+    }
+    @include r(1023) {
+      font-size: 18px;
+      flex: 0 0 auto;
+      padding: 3px 18px 0 18px;
+    }
+    @include r(767) {
+      padding: 3px 15px 0 15px;
+    }
+
+    &:hover {
+      border-bottom-color: #fff;
+    }
+
+    &::after {
+      content: '';
+      width: 30px;
+      height: 30px;
+      background: {
+        color: #fff;
+        image: url("#{$images-path}/icon-right-arrow.svg");
+        repeat: no-repeat;
+        position: center;
+      }
+      border-radius: 50%;
+      display: inline-block;
+      margin-left: 24px;
+      position: relative;
+      top: -2px;
+      @include r(1300) {
+        width: 26px;
+        height: 26px;
+        margin-left: 20px;
+        background-size: 13px;
+      }
+      @include r(1023) {
+        width: 20px;
+        height: 20px;
+        background-size: 10px;
+        margin-left: 17px;
+      }
+    }
+  }
+
+  &__login {
+    font-family: Neue Montreal;
+    border-left: 1px solid rgba(#fff, .15);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 80px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #fff;
+    width: 130px;
+    flex: 0 0 auto;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(#fff, .15);
+    transition-property: border-bottom-color;
+    transition-duration: .3s;
+    @include r(1440) {
+      width: 120px;
+      line-height: 70px;
+    }
+    @include r(1023) {
+      display: none;
+    }
+
+    &:hover {
+      border-bottom-color: #fff;
+    }
+  }
+}

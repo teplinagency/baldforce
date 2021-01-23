@@ -1,0 +1,53 @@
+@font-face {
+  font-family: Teko;
+  src: url('#{$font-path}/Teko-Medium.eot');
+  src: url('#{$font-path}/Teko-Medium.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/Teko-Medium.woff2') format('woff2'),
+  url('#{$font-path}/Teko-Medium.woff') format('woff'),
+  url('#{$font-path}/Teko-Medium.ttf') format('truetype'),
+  url('#{$font-path}/Teko-Medium.svg#Teko-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Neue Montreal;
+  src: url('#{$font-path}/NeueMontreal-Regular.eot');
+  src: url('#{$font-path}/NeueMontreal-Regular.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/NeueMontreal-Regular.woff2') format('woff2'),
+  url('#{$font-path}/NeueMontreal-Regular.woff') format('woff'),
+  url('#{$font-path}/NeueMontreal-Regular.ttf') format('truetype'),
+  url('#{$font-path}/NeueMontreal-Regular.svg#NeueMontreal-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('#{$font-path}/NeueMontreal-Bold.eot');
+  src: url('#{$font-path}/NeueMontreal-Bold.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/NeueMontreal-Bold.woff2') format('woff2'),
+  url('#{$font-path}/NeueMontreal-Bold.woff') format('woff'),
+  url('#{$font-path}/NeueMontreal-Bold.ttf') format('truetype'),
+  url('#{$font-path}/NeueMontreal-Bold.svg#NeueMontreal-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('#{$font-path}/NeueMontreal-Light.eot');
+  src: url('#{$font-path}/NeueMontreal-Light.eot?#iefix') format('embedded-opentype'),
+  url('#{$font-path}/NeueMontreal-Light.woff2') format('woff2'),
+  url('#{$font-path}/NeueMontreal-Light.woff') format('woff'),
+  url('#{$font-path}/NeueMontreal-Light.ttf') format('truetype'),
+  url('#{$font-path}/NeueMontreal-Light.svg#NeueMontreal-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+

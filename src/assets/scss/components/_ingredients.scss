@@ -1,0 +1,306 @@
+.ingredients {
+  background-color: rgba(#fff, .05);
+
+  &__content {
+    padding: 150px 0 120px 0;
+
+    @include r(970) {
+      padding: 75px 0;
+    }
+  }
+
+  &__holder {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 100px;
+
+    @include r(1440) {
+      margin-top: 80px;
+    }
+
+    @include r(970) {
+      display: block;
+      margin-top: 70px;
+    }
+  }
+
+  &__slider {
+    flex: 0 0 auto;
+    margin-left: -160px;
+    width: 759px;
+    position: relative;
+    @include r(1700) {
+      width: 639px;
+      margin-left: 0;
+    }
+    @include r(1440) {
+      width: 579px;
+    }
+    @include r(1100) {
+      width: 400px;
+    }
+    @include r(970) {
+      max-width: 400px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .swiper-slide {
+      height: 440px !important;
+      transition-property: width, height, filter, transform;
+      transition-duration: .3s;
+      @include r(1700) {
+        height: 400px !important;
+      }
+
+      &.swiper-slide-active {
+        width: 480px !important;
+        height: 724px !important;
+
+        @include r(1700) {
+          width: 400px !important;
+          height: 680px !important;
+        }
+        @include r(1440) {
+          width: 340px !important;
+          height: 600px !important;
+        }
+        @include r(1100) {
+          width: 400px !important;
+          height: 500px !important;
+        }
+        @include r(440) {
+          width: inherit !important;
+        }
+      }
+
+      &.swiper-slide-prev {
+        width: 140px !important;
+        height: 440px !important;
+        filter: grayscale(100%);
+        transform: translateY(46px);
+        @include r(1700) {
+          width: 120px !important;
+          height: 400px !important;
+        }
+        @include r(1100) {
+          width: 400px !important;
+          height: 500px !important;
+          transform: none;
+        }
+        @include r(440) {
+          width: inherit !important;
+        }
+      }
+
+      &.swiper-slide-next {
+        width: 140px !important;
+        height: 440px !important;
+        filter: grayscale(100%);
+        transform: translateY(156px);
+        @include r(1700) {
+          width: 120px !important;
+          height: 400px !important;
+        }
+        @include r(1440) {
+          transform: translateY(126px);
+        }
+        @include r(1100) {
+          width: 400px !important;
+          height: 500px !important;
+          transform: none;
+        }
+        @include r(440) {
+          width: inherit !important;
+        }
+      }
+    }
+
+    .ingredients__prev {
+      position: absolute;
+      top: 46px;
+      left: 0;
+      cursor: pointer;
+      z-index: 2;
+      opacity: 0;
+      width: 140px;
+      height: 440px;
+
+      @include r(1700) {
+        width: 120px !important;
+        height: 400px !important;
+      }
+      @include r(1100) {
+        width: 100px;
+        top: 0;
+        height: 500px !important;
+      }
+    }
+
+    .ingredients__next {
+      position: absolute;
+      top: 156px;
+      right: 0;
+      cursor: pointer;
+      z-index: 2;
+      opacity: 0;
+      width: 140px;
+      height: 440px;
+
+      @include r(1700) {
+        width: 120px !important;
+        height: 400px !important;
+      }
+      @include r(1440) {
+        top: 126px;
+      }
+      @include r(1100) {
+        width: 100px;
+        top: 0;
+        height: 500px !important;
+      }
+    }
+  }
+
+  &__slide {
+    display: block;
+    background: {
+      repeat: no-repeat;
+      size: cover;
+      position: center top;
+    }
+    height: 100%;
+  }
+
+  &__description {
+    flex: 1 1 auto;
+    padding-left: 100px;
+    @include r(1700) {
+      padding-left: 60px;
+    }
+    @include r(970) {
+      padding: 65px 0 0 0;
+    }
+  }
+
+  &__item {
+    margin-bottom: 78px;
+
+    @include r(1700) {
+      margin-bottom: 60px;
+    }
+    @include r(1440) {
+      margin-bottom: 50px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 18px;
+
+      img {
+        width: 40px;
+        position: relative;
+        top: -4px;
+        flex: 0 0 auto;
+      }
+
+      h4 {
+        flex: 1 1 auto;
+        padding-left: 28px;
+        @include r(1440) {
+          padding-left: 24px;
+        }
+        @include r(970) {
+          padding-left: 21px;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 80px;
+
+    @include r(970) {
+      display: block;
+      margin-top: 70px;
+    }
+
+    &-lside {
+      width: 700px;
+      flex: 0 0 auto;
+
+      @include r(1440) {
+        width: 640px;
+      }
+      @include r(1100) {
+        width: 460px;
+      }
+
+      a {
+        display: inline-block;
+        position: relative;
+        font-family: Teko;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: .94;
+        text-transform: uppercase;
+        color: #fff;
+        text-decoration: none;
+
+        @include r(1170) {
+          font-size: 36px;
+        }
+        @include r(970) {
+          font-size: 34px;
+        }
+
+        &::after {
+          position: absolute;
+          top: 44%;
+          transform: translateY(-50%);
+          right: -40px;
+          width: 20px;
+          height: 20px;
+          content: '';
+          background: {
+            image: url("#{$images-path}/icon-right-arrow-white.svg");
+            repeat: no-repeat;
+            size: contain;
+          }
+          opacity: 0;
+          transition-property: opacity;
+          transition-duration: .3s;
+          @include r(1170) {
+            right: -35px;
+          }
+        }
+
+        &:hover {
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &-rside {
+      flex: 1 1 auto;
+
+      @include r(970) {
+        margin-top: 25px;
+      }
+
+      p {
+        line-height: 1.5;
+      }
+    }
+  }
+}

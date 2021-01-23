@@ -1,0 +1,312 @@
+.faq {
+  overflow: hidden;
+
+  &__content {
+    padding: 200px 0 150px 0;
+
+    @include r(970) {
+      padding: 125px 0 75px 0;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+      &::after {
+        width: 100%;
+        @include r(970) {
+          width: 87px;
+        }
+      }
+    }
+
+    @include r(970) {
+      display: block;
+    }
+
+    p {
+      max-width: 500px;
+      line-height: 1.5;
+
+      @include r(970) {
+        max-width: 100%;
+        margin-top: 30px;
+      }
+    }
+
+    .link-arrow {
+      @include r(970) {
+        margin-top: 23px;
+      }
+    }
+  }
+
+  &__bg {
+    margin-top: 100px;
+    height: 780px;
+    width: 82vw;
+    background: {
+      repeat: no-repeat;
+      size: cover;
+      position: center;
+    }
+
+    @include r(1800) {
+      width: 84vw;
+      height: 760px;
+    }
+    @include r(1700) {
+      width: 86vw;
+      height: 740px;
+      margin-top: 90px;
+    }
+    @include r(1600) {
+      width: 89vw;
+      height: 720px;
+    }
+    @include r(1500) {
+      width: 92vw;
+      height: 700px;
+      margin-top: 80px;
+    }
+    @include r(1400) {
+      width: 94vw;
+      height: 680px;
+      margin-top: 70px;
+    }
+    @include r(1300) {
+      width: 95vw;
+      height: 660px;
+    }
+    @include r(1023) {
+      width: calc(100% + 20px);
+      height: 600px;
+      margin-top: 65px;
+    }
+    @include r(767) {
+      width: calc(100% + 16px);
+      height: 500px;
+    }
+    @include r(600) {
+      height: 360px;
+    }
+  }
+
+  &__numbers {
+    display: flex;
+    border-top: 4px solid #fff;
+    padding-top: 60px;
+    margin-top: 150px;
+
+    @include r(1440) {
+      padding-top: 45px;
+      margin-top: 120px;
+    }
+    @include r(1023) {
+      padding-top: 18px;
+      margin-top: 70px;
+    }
+
+    &-inners {
+      display: flex;
+      align-items: flex-start;
+      margin: 0 -20px;
+      justify-content: space-between;
+      width: 100%;
+      @include r(1023) {
+        flex-wrap: wrap;
+      }
+      @include r(767) {
+        display: block;
+        margin: 0;
+      }
+    }
+
+    &-inner {
+      flex: 0 0 auto;
+      padding: 20px;
+      max-width: 40%;
+      @include r(1023) {
+        flex: 0 0 50%;
+        max-width: 100%;
+      }
+      @include r(767) {
+        padding: 18px 0;
+      }
+    }
+
+    &-title {
+      color: #fff;
+      text-transform: uppercase;
+
+    }
+
+    &-value {
+      display: flex;
+      align-items: flex-end;
+      margin-top: 15px;
+
+      strong {
+        display: block;
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-family: Teko;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 100px;
+        line-height: .81;
+        text-transform: capitalize;
+
+        @include r(1023) {
+          font-size: 86px;
+        }
+      }
+
+      p {
+        display: inline-block;
+        position: relative;
+        top: -16px;
+        padding-left: 26px;
+      }
+    }
+  }
+
+  &__ps {
+    margin-top: 10px;
+    text-align: center;
+    @include r(767) {
+      text-align: left;
+    }
+  }
+
+  &__inners {
+    display: block;
+    margin-top: 150px;
+
+    @include r(1440) {
+      margin-top: 100px;
+    }
+
+    @include r(970) {
+      margin-top: 50px;
+    }
+  }
+
+  &__inner {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.2);
+      height: 1px;
+      bottom: 0;
+      left: 0;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 0;
+      background-color: #fff;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      transition-property: width;
+      transition-delay: .2s;
+      transition-duration: .3s;
+    }
+
+    &.is-open {
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &-header {
+      padding: 38px 38px 36px 0;
+      position: relative;
+      cursor: pointer;
+
+      &::before {
+        position: absolute;
+        content: '';
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        background: {
+          image: url("#{$images-path}/icon-plus.svg");
+          repeat: no-repeat;
+          size: contain;
+        }
+        transition-property: opacity;
+        transition-duration: .3s;
+
+        @include r(970) {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 2px;
+        background: {
+          image: url("#{$images-path}/icon-minus.svg");
+          repeat: no-repeat;
+          size: contain;
+        }
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: .3s;
+
+        @include r(970) {
+          width: 16px;
+        }
+      }
+
+      h6 {
+        font-size: 30px;
+        text-transform: inherit;
+
+        @include r(1440) {
+          font-size: 28px;
+        }
+
+        @include r(970) {
+          font-size: 22px;
+        }
+      }
+
+      &.is-open {
+        &::before {
+          opacity: 0;
+        }
+
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+
+    &-body {
+      padding-bottom: 38px;
+      display: none;
+
+      p {
+        line-height: 1.4;
+      }
+    }
+  }
+}

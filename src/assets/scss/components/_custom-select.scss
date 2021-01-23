@@ -1,0 +1,140 @@
+.custom-select {
+  &::before, &::after {
+    display: none;
+  }
+
+  .select2-container {
+    width: 100% !important;
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background-color: rgba(#fff, .3);
+      transition-property: width;
+      transition-duration: .3s;
+      z-index: 2;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: 0;
+      background-color: #fff;
+      width: 0;
+      height: 1px;
+      transition-property: width;
+      transition-duration: .3s;
+      z-index: 2;
+    }
+
+    &.select2-container--open {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  .select2-container--default .select2-selection--single {
+    border: none;
+    height: 50px;
+    background-color: transparent;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 30px 0 0;
+    font-family: Neue Montreal;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #fff;
+  }
+
+  .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 50px;
+    width: 26px;
+    top: 0;
+
+    b {
+      left: inherit;
+      right: 0;
+      margin-left: 0;
+      border-color: #fff transparent transparent transparent;
+    }
+  }
+  .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border-color: transparent transparent #fff transparent;
+  }
+
+  &.header__languages {
+    .select2-container {
+      height: 100%;
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+    .select2-selection {
+      height: 100% !important;
+    }
+    .select2-selection__rendered {
+      padding: 0 !important;
+      text-align: center;
+      line-height: 80px !important;
+      font-size: 16px;
+      text-transform: uppercase;
+      @include r(1440) {
+        line-height: 70px !important;
+      }
+    }
+    .select2-selection__arrow {
+      display: none !important;
+    }
+  }
+}
+
+.select2-dropdown {
+  border: none;
+  background-color: #191919;
+  border-radius: 0;
+
+  li {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 23px;
+    font-family: Neue Montreal;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: rgba(#fff, .5);
+    background-color: transparent !important;
+    transition-property: color, background-color;
+    transition-duration: .3s;
+    &:hover {
+      background-color: #0D0D0D !important;
+    }
+  }
+
+  .select2-container--default .select2-results__option[aria-selected=true] {
+    color: #fff;
+  }
+}
+
+.drop-lang {
+  .select2-results__options {
+    max-height: 300px !important;
+  }
+  li {
+    text-align: center !important;
+  }
+}

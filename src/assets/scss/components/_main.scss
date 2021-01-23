@@ -1,0 +1,367 @@
+.main {
+  section, footer {
+    @include r(1440) {
+      padding-left: 70px;
+    }
+    @include r(1023) {
+      padding-left: 0;
+    }
+  }
+
+}
+
+h1 {
+  display: block;
+  font-family: Teko;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 140px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: #fff;
+
+  @include r(1700) {
+    font-size: 130px;
+  }
+  @include r(1600) {
+    font-size: 120px;
+  }
+  @include r(1500) {
+    font-size: 110px;
+  }
+  @include r(1400) {
+    font-size: 100px;
+  }
+  @include r(1300) {
+    font-size: 90px;
+  }
+  @include r(1023) {
+    font-size: 80px;
+  }
+  @include r(767) {
+    font-size: 68px;
+  }
+}
+
+h2 {
+  display: block;
+  font-family: Teko;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 110px;
+  line-height: .82;
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+  padding-bottom: 28px;
+
+  @include r(1700) {
+    font-size: 100px;
+  }
+  @include r(1600) {
+    font-size: 90px;
+  }
+  @include r(1500) {
+    font-size: 80px;
+  }
+  @include r(1400) {
+    font-size: 70px;
+  }
+  @include r(1300) {
+    font-size: 60px;
+  }
+  @include r(1023) {
+    font-size: 55px;
+  }
+
+  &.text-lg {
+    font-size: 130px;
+
+    @include r(1700) {
+      font-size: 100px;
+    }
+    @include r(1600) {
+      font-size: 90px;
+    }
+    @include r(1500) {
+      font-size: 80px;
+    }
+    @include r(1023) {
+      font-size: 64px;
+    }
+  }
+
+  span {
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 175px;
+    height: 4px;
+    background-color: #fff;
+
+    @include r(1440) {
+      width: 130px;
+    }
+
+    @include r(970) {
+      width: 87px;
+    }
+  }
+}
+
+h3 {
+  display: block;
+  font-family: Teko;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 68px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+  padding-bottom: 10px;
+
+  @include r(1700) {
+    font-size: 64px;
+  }
+  @include r(1600) {
+    font-size: 60px;
+  }
+  @include r(1500) {
+    font-size: 56px;
+  }
+  @include r(1400) {
+    font-size: 52px;
+  }
+  @include r(1300) {
+    font-size: 48px;
+  }
+  @include r(1023) {
+    font-size: 44px;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 110px;
+    height: 2px;
+    background-color: #fff;
+  }
+}
+
+h4 {
+  display: block;
+  font-family: Teko;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #fff;
+
+  @include r(1600) {
+    font-size: 38px;
+  }
+  @include r(1400) {
+    font-size: 36px;
+  }
+  @include r(1023) {
+    font-size: 34px;
+  }
+
+}
+
+h5 {
+  display: block;
+  font-family: Teko;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+h6 {
+  display: block;
+  font-family: Teko;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: .95;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+p {
+  display: block;
+  font-family: Neue Montreal;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.2;
+  color: rgba(#fff, .5);
+
+  @include r(1600) {
+    font-size: 16px;
+  }
+
+  &.lg-text {
+    font-size: 20px;
+
+    @include r(1600) {
+      font-size: 18px;
+    }
+  }
+
+  &.sm-text {
+    font-size: 16px;
+  }
+
+  &.xs-text {
+    font-size: 14px;
+  }
+}
+
+.link {
+  display: inline-block;
+  font-family: Neue Montreal;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition-property: border-bottom-color;
+  transition-duration: .3s;
+
+  &:hover {
+    border-bottom-color: #fff;
+  }
+}
+
+.link-arrow {
+  display: inline-block;
+  position: relative;
+  font-family: Neue Montreal;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  padding-right: 60px;
+  @include r(970) {
+    padding-right: 38px;
+    font-size: 14px;
+  }
+
+  &::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: {
+      color: #fff;
+      image: url("#{$images-path}/icon-right-arrow.svg");
+      repeat: no-repeat;
+      position: center;
+    }
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    transition-property: opacity;
+    transition-duration: .3s;
+
+    @include r(970) {
+      width: 26px;
+      height: 26px;
+      background-size: 13px;
+    }
+  }
+
+  &::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    background: {
+      color: transparent;
+      image: url("#{$images-path}/icon-right-arrow-white.svg");
+      repeat: no-repeat;
+      position: center;
+    }
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: .3s;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0;
+    }
+
+    &::after {
+      opacity: 1;
+    }
+  }
+
+  &.bold {
+    font-family: Teko;
+    font-weight: 500;
+    font-size: 26px;
+
+    &::after {
+      position: relative;
+      top: -3px;
+    }
+  }
+}
+
+.btn-link-circle {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: {
+    color: rgba(255, 255, 255, 0.05);
+    image: url("#{$images-path}/icon-left-arrow-white.svg");
+    repeat: no-repeat;
+    position: center;
+  }
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  backdrop-filter: blur(20px);
+  border-radius: 50%;
+  transition-property: border-color, background-color;
+  transition-duration: .3s;
+
+  @include r(1023) {
+    width: 80px;
+    height: 80px;
+    background-size: 20px;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0);
+  }
+}

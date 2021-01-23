@@ -1,0 +1,178 @@
+.profile {
+  overflow: hidden;
+
+  &__content {
+    padding: 200px 0 150px 0;
+
+    @include r(970) {
+      padding: 125px 0 75px 0;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include r(970) {
+      display: block;
+    }
+
+    a.link-arrow {
+      @include r(970) {
+        margin-top: 23px;
+      }
+    }
+  }
+
+  &__tabs {
+    display: block;
+    margin-top: 80px;
+
+    &-btns {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    &-btn {
+      padding: 24px 10px;
+      flex: 0 0 33.3333333%;
+      font-family: Neue Montreal;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      text-align: center;
+      line-height: 1;
+      text-transform: uppercase;
+      color: rgba(#fff, .6);
+      cursor: pointer;
+      border-bottom: 1px solid rgba(#fff, .6);
+      transition-property: border-bottom-color, color;
+      transition-duration: .4s;
+
+      @include r(970) {
+        font-size: 16px;
+        padding: 20px 4px;
+      }
+      @include r(767) {
+        font-size: 14px;
+      }
+
+      &:hover {
+        color: #fff;
+      }
+
+      &.is-open {
+        color: #fff;
+        border-bottom-color: #fff;
+      }
+    }
+
+    &-contents {
+      display: block;
+      margin-top: 40px;
+    }
+
+    &-content {
+      display: none;
+
+      &.is-open {
+        display: block;
+      }
+    }
+
+    &-form {
+      display: flex;
+      @include r(767) {
+        display: block;
+      }
+
+      &-title {
+        color: #fff;
+        margin-bottom: 25px;
+        @include r(767) {
+          margin-bottom: 10px;
+        }
+      }
+
+      &-lside {
+        flex: 1 1 auto;
+      }
+
+      &-rside {
+        flex: 0 0 auto;
+        width: 337px;
+        margin-left: 100px;
+
+        @include r(1023) {
+          margin-left: 50px;
+        }
+        @include r(970) {
+          margin-left: 30px;
+          width: 33.3333333%;
+        }
+        @include r(767) {
+          width: 100%;
+          margin: 50px 0 0 0;
+        }
+      }
+    }
+
+    &-inners {
+      display: flex;
+      align-items: center;
+      margin: 0 -15px;
+      flex-wrap: wrap;
+    }
+
+    &-inner {
+      padding: 15px;
+
+      &-fields {
+        display: flex;
+        align-items: center;
+        margin: 0 -15px;
+      }
+
+      &-field {
+        flex: 0 0 50%;
+        padding: 0 15px;
+      }
+
+      &.w-auto {
+        flex: 0 0 auto;
+
+        @include r(767) {
+          flex: 0 0 100%;
+        }
+
+        .btn-white {
+          width: 338px;
+          height: 66px;
+          line-height: 66px;
+          font-size: 30px;
+          margin-bottom: 16px;
+        }
+      }
+
+      &.w-33 {
+        flex: 0 0 33.3333333%;
+        @include r(767) {
+          flex: 0 0 100%;
+        }
+      }
+
+      &.w-50 {
+        flex: 0 0 50%;
+        @include r(767) {
+          flex: 0 0 100%;
+        }
+      }
+
+      &.w-100 {
+        flex: 0 0 100%;
+      }
+    }
+  }
+
+}

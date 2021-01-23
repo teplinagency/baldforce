@@ -1,0 +1,172 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 80px;
+  width: calc(100% - 80px);
+  background-color: #000;
+  z-index: 12;
+  height: 100%;
+  padding: 86px 86px 80px 320px;
+  overflow-y: auto;
+  max-height: 100%;
+  transform: translateY(-100%);
+  transition-property: transform;
+  transition-duration: .3s;
+
+  @include r(1700) {
+    padding-left: 280px;
+  }
+  @include r(1600) {
+    padding-left: 260px;
+  }
+  @include r(1500) {
+    padding-left: 240px;
+  }
+  @include r(1440) {
+    left: 70px;
+    width: calc(100% - 70px);
+  }
+  @include r(1400) {
+    padding-left: 220px;
+  }
+  @include r(1300) {
+    padding-left: 180px;
+  }
+  @include r(1200) {
+    padding-left: 140px;
+  }
+  @include r(1100) {
+    padding-left: 120px;
+  }
+  @include r(1023) {
+    padding: 130px 50px 20px 60px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  @include r(767) {
+    padding: 130px 20px 20px 20px;
+  }
+
+  &__items {
+    display: block;
+    position: relative;
+    padding-right: 27.61vw;
+    @include r(767) {
+      padding: 0 0 60px 0;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      right: -50px;
+      width: 152px;
+      height: 152px;
+      background: {
+        image: url("#{$images-path}/icon-item-menu.svg");
+        repeat: no-repeat;
+        size: contain;
+      }
+      content: '';
+      @include r(1600) {
+        width: 135px;
+        height: 135px;
+      }
+      @include r(1023) {
+        width: 120px;
+        height: 120px;
+        right: -20px;
+      }
+      @include r(767) {
+        bottom: 0;
+        right: 0;
+      }
+    }
+
+    li {
+      display: block;
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+      @include r(1023) {
+        margin-bottom: 36px;
+      }
+
+      a {
+        display: inline-block;
+        font-family: Teko;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 86px;
+        line-height: .8;
+        color: #fff;
+        transition-property: transform;
+        transition: .3s;
+
+        @include r(1700) {
+          font-size: 80px;
+        }
+        @include r(1600) {
+          font-size: 75px;
+        }
+        @include r(1500) {
+          font-size: 70px;
+        }
+        @include r(1400) {
+          font-size: 55px;
+        }
+        @include r(1300) {
+          font-size: 50px;
+        }
+        @include r(1023) {
+          font-size: 48px;
+        }
+
+        &:hover {
+          transform: translateX(30px);
+        }
+
+        &:hover + .navigation__image {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        &.is-disable {
+          color: rgba(#fff, .2);
+        }
+
+        &.is-active {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 27.61vw;
+    background: {
+      repeat: no-repeat;
+      size: cover;
+      position: center top;
+    }
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: .3s;
+    @include r(767) {
+      display: none;
+    }
+  }
+}
+
+body.is-open-menu {
+  .navigation {
+    transform: translateY(0);
+  }
+}

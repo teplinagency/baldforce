@@ -1,0 +1,288 @@
+.about-us {
+  position: relative;
+
+  &__top {
+    display: flex;
+    align-items: flex-end;
+
+    @include r(970) {
+      display: block;
+    }
+
+    &-inner {
+
+      &:first-child {
+        flex: 0 0 64%;
+        @include r(1200) {
+          flex: 0 0 60%;
+          padding-right: 40px;
+        }
+      }
+
+      &:last-child {
+        flex: 0 0 36%;
+        padding-bottom: 40px;
+        @include r(1200) {
+          flex: 0 0 40%;
+        }
+        @include r(970) {
+          padding: 34px 0 0 0;
+        }
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+
+    @include r(970) {
+      display: block;
+    }
+
+    &--right {
+      .about-us__info {
+        padding: 0 0 0 100px;
+        @include r(970) {
+          padding: 60px 0 0 0;
+        }
+      }
+    }
+  }
+
+  &__image {
+    flex: 1 1 auto;
+    height: 525px;
+    position: relative;
+    background: {
+      repeat: no-repeat;
+      size: cover;
+      position: center;
+    }
+    @include r(970) {
+      height: 400px;
+      width: calc(100% + 20px);
+      padding: 0;
+      position: relative;
+      left: -20px;
+    }
+    @include r(767) {
+      height: 360px;
+      left: -16px;
+      width: calc(100% + 16px);
+    }
+  }
+
+  &__info {
+    width: 410px;
+    flex: 0 0 auto;
+    padding-right: 100px;
+    @include r(970) {
+      width: 100%;
+      padding: 0;
+    }
+
+    .link-arrow {
+      margin-top: 65px;
+
+      @include r(970) {
+        margin-top: 50px;
+      }
+    }
+
+    &-top {
+      display: flex;
+      align-items: center;
+
+      &--brd-top {
+        padding-top: 100px;
+        border-top: 4px solid #fff;
+        @include r(970) {
+          padding-top: 40px;
+        }
+      }
+    }
+
+    &-play {
+      position: absolute;
+      bottom: -105px;
+      left: -105px;
+      width: 214px;
+      height: 214px;
+      cursor: pointer;
+
+      @include r(1600) {
+        width: 170px;
+        height: 170px;
+        bottom: -45px;
+        left: -45px;
+      }
+      @include r(1350) {
+        width: 160px;
+        height: 160px;
+        bottom: inherit;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background: {
+          image: url("#{$images-path}/icon-btn-play.svg");
+          repeat: no-repeat;
+          size: contain;
+        }
+        transition-property: opacity;
+        transition-duration: .3s;
+      }
+
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background: {
+          image: url("#{$images-path}/icon-buy-play-h.svg");
+          repeat: no-repeat;
+          size: contain;
+        }
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: .3s;
+      }
+
+      &:hover {
+        &::before {
+          opacity: 0;
+        }
+
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+
+    &-photo {
+      width: 100px;
+      height: 100px;
+      display: inline-block;
+      border-radius: 50%;
+      background: {
+        repeat: no-repeat;
+        size: cover;
+        position: center top;
+      }
+      flex: 0 0 auto;
+      @include r(970) {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    &-description {
+      flex: 1 1 auto;
+      padding-left: 44px;
+      @include r(970) {
+        padding-left: 40px;
+      }
+    }
+
+    &-name {
+      display: block;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 1.2;
+      color: #fff;
+      @include r(970) {
+        font-size: 18px;
+      }
+    }
+
+    &-position {
+      display: block;
+      margin-top: 8px;
+    }
+
+    &-slogan {
+      display: block;
+      margin-top: 35px;
+      text-transform: inherit;
+      @include r(970) {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 58.6vw;
+    height: 770px;
+    background: {
+      repeat: no-repeat;
+      attachment: fixed;
+      position: center;
+      size: cover;
+    }
+    @include r(1440) {
+      height: 670px;
+    }
+    @include r(970) {
+      height: 400px;
+      position: relative;
+      width: calc(100% + 20px);
+      margin: 60px 0 0 0;
+    }
+    @include r(767) {
+      height: 360px;
+      width: calc(100% + 16px);
+      background-attachment: inherit;
+    }
+  }
+
+  &__holder {
+    position: relative;
+
+    &:first-child {
+      .about-us__inner {
+        padding-top: 500px;
+        @include r(1440) {
+          padding-top: 400px;
+        }
+        @include r(970) {
+          padding-top: 60px;
+        }
+      }
+
+      .about-us__content {
+        padding: 140px 0 0 0;
+
+        @include r(1440) {
+          padding-top: 100px;
+        }
+        @include r(1023) {
+          padding-top: 75px;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .about-us__content {
+        padding: 180px 0 100px 0;
+
+        @include r(970) {
+          padding: 150px 0 75px 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+html,
+body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  text-rendering: optimizelegibility;
+  -webkit-font-feature-settings: "liga" 1;
+  -moz-font-feature-settings: "liga" 1;
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga" 1;
+}
+
+body {
+  margin: 0;
+  font-family: Neue Montreal, sans-serif;
+  background-color: #000;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+input:-webkit-autofill {
+  box-shadow: inset 0 0 0 50px transparent; /* цвет вашего фона */
+  text-fill-color: transparent; /* цвет текста */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+
+  & [x-apple-data-detectors] {
+    font: {
+      family: inherit;
+      size: inherit;
+      weight: inherit;
+    }
+    line-height: inherit;
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+input,
+textarea {
+  &[required]:-moz-ui-invalid {
+    box-shadow: none;
+  }
+}
+
+textarea {
+  max-width: 100%;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1210px;
+  padding: 0 20px;
+
+  @include r(767) {
+    padding: 0 16px;
+  }
+}

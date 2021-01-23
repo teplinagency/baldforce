@@ -1,0 +1,119 @@
+.contacts {
+  overflow: hidden;
+  position: relative;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(#fff, .08);
+    content: '';
+    width: 50%;
+    height: 100%;
+
+    @include r(970) {
+      display: none;
+    }
+  }
+  &__content {
+    padding: 200px 0 30px 0;
+    position: relative;
+    z-index: 2;
+
+    @include r(970) {
+      padding: 125px 0 75px 0;
+    }
+  }
+
+  &__image {
+    display: none;
+    max-width: 300px;
+    margin: 90px auto 0 auto;
+    width: 100%;
+    @include r(970) {
+      display: block;
+    }
+    @include r(600) {
+      max-width: 275px;
+    }
+  }
+
+  &__holder {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include r(970) {
+      display: block;
+    }
+  }
+
+  &__description {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 400px;
+
+    @include r(970) {
+      position: relative;
+      width: 100%;
+    }
+  }
+
+  &__address {
+    display: block;
+    margin-top: 100px;
+    max-width: 250px;
+    text-transform: uppercase;
+    color: #fff;
+
+    @include r(970) {
+      margin-top: 65px;
+    }
+  }
+
+  &__bottom {
+    display: block;
+    margin-top: 68px;
+    @include r(970) {
+      margin-top: 48px;
+    }
+  }
+
+  &__form {
+    display: block;
+    flex: 0 0 auto;
+    width: 50%;
+    padding: 0 0 115px 115px;
+
+    @include r(1440) {
+      padding: 0 60px 80px 80px;
+    }
+    @include r(1200) {
+      padding: 0 30px 80px 50px;
+    }
+
+    @include r(970) {
+      background-color: rgba(#fff, .08);
+      padding: 90px 20px;
+      margin: 100px -20px 0 -20px;
+      width: calc(100% + 40px);
+    }
+    @include r(767) {
+      margin: 100px -16px 0 -16px;
+      padding: 90px 16px;
+      width: calc(100% + 32px);
+    }
+
+    h4 {
+      margin-bottom: 20px;
+    }
+
+    &-inner {
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,164 @@
+.posts {
+  &__content {
+    padding: 150px 0 165px;
+
+    @include r(1440) {
+      padding: 120px 0 165px 0;
+    }
+
+    @include r(1360) {
+      padding: 100px 0 165px 0;
+    }
+
+    @include r(1023) {
+      padding: 75px 0;
+    }
+  }
+
+  &__inners {
+    display: flex;
+    align-items: flex-start;
+    margin: 0 -35px;
+    flex-wrap: wrap;
+    @include r(1360) {
+      margin: 0 -10px;
+    }
+    @include r(767) {
+      display: block;
+      margin: 0;
+    }
+  }
+
+  &__inner {
+    flex: 0 0 auto;
+    width: 33.3333333%;
+    padding: 35px;
+
+    @include r(1360) {
+      padding: 10px;
+    }
+    @include r(1023) {
+      width: 50%;
+    }
+    @include r(767) {
+      padding: 15px 0;
+      width: 100%;
+    }
+
+    &:nth-child(3n-1) {
+      margin-top: -70px;
+      @include r(1360) {
+        margin-top: -40px;
+      }
+      @include r(1023) {
+        margin: 0;
+      }
+    }
+  }
+
+  .btn-white-border {
+    width: calc(33.3333333% - 46px);
+    margin: -35px auto 0 auto;
+    @include r(1360) {
+      width: calc(33.3333333% - 14px);
+      margin-top: -8px;
+    }
+    @include r(1023) {
+      max-width: 340px;
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+}
+
+.post {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: {
+      repeat: no-repeat;
+      size: cover;
+      position: center;
+    }
+    z-index: 1;
+    transition-property: filter;
+    transition-duration: .3s;
+  }
+
+  .link-arrow {
+    position: absolute;
+    z-index: 3;
+    left: 40px;
+    bottom: 48px;
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: .3s;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    background-color: rgba(#000, .3);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+
+  &__description {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    padding: 58px 0 40px 0;
+    z-index: 3;
+    border-top: 3px solid #fff;
+  }
+
+  &__date {
+    color: #fff;
+    padding-left: 13px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 6px;
+      height: 6px;
+      content: '';
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-top: 28px;
+  }
+
+  &:hover {
+    .post {
+      &__image {
+        filter: blur(45px);
+      }
+    }
+
+    .link-arrow {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

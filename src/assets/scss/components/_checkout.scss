@@ -1,0 +1,220 @@
+.checkout {
+  &__content {
+    padding: 200px 0 165px 0;
+
+    @include r(970) {
+      padding: 125px 0 75px 0;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include r(500) {
+      align-items: flex-start;
+    }
+
+    .link-arrow {
+      @include r(500) {
+        max-width: 120px;
+        margin-top: 2px;
+      }
+    }
+  }
+
+  &__holder {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 100px;
+
+    @include r(970) {
+      display: block;
+      margin-top: 70px;
+    }
+  }
+
+  &__rside {
+    width: 410px;
+    flex: 0 0 auto;
+    margin-left: 73px;
+    background-color: rgba(#fff, .1);
+    padding: 40px;
+
+    @include r(1440) {
+      margin-left: 60px;
+    }
+    @include r(1200) {
+      margin-left: 40px;
+    }
+    @include r(970) {
+      max-width: 400px;
+      width: 100%;
+      margin: 100px auto 0 auto;
+    }
+    @include r(767) {
+      padding-top: 28px 32px;
+    }
+
+    button {
+      margin-top: 38px;
+    }
+
+    h4 {
+      font-size: 46px;
+    }
+
+    &-items {
+      display: block;
+      margin-top: 40px;
+    }
+
+    &-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-title {
+      flex: 0 0 auto;
+      width: 100px;
+      margin-right: 20px;
+      color: rgba(#fff, .5);
+      text-transform: uppercase;
+
+      @include r(767) {
+        font-size: 14px !important;
+        width: 86px;
+      }
+    }
+
+    &-value {
+      flex: 1 1 auto;
+      color: #fff;
+
+      strong {
+        display: block;
+        font-family: Teko;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 38px;
+        line-height: .94;
+        color: #fff;
+
+        @include r(970) {
+          font-size: 30px;
+        }
+      }
+
+      span {
+        display: block;
+        margin-top: 3px;
+        font-family: Neue Montreal;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        text-transform: uppercase;
+        color: rgba(#fff, .5);
+      }
+    }
+  }
+
+  &__form {
+    flex: 1 1 auto;
+
+    &-title {
+      display: block;
+      font-family: Neue Montreal;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 1;
+      text-transform: uppercase;
+      color: #fff;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(#fff, .6);
+
+      @include r(1440) {
+        font-size: 18px;
+      }
+      @include r(1023) {
+        font-size: 16px;
+      }
+    }
+
+    &-inners {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin: 30px -17px 43px -17px;
+
+      &--payment {
+        .checkout__form-inner {
+          padding-top: 8px;
+          padding-bottom: 8px;
+
+          &:last-child {
+            padding-top: 30px;
+          }
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-inner {
+      flex: 0 0 100%;
+      padding: 17px;
+
+      &--relative {
+        position: relative;
+
+        .form-group--abs {
+          position: absolute;
+          top: 0;
+          right: 17px;
+          width: 330px;
+
+          @include r(1200) {
+            width: 280px;
+          }
+          @include r(1100) {
+            width: 240px;
+          }
+          @include r(600) {
+            position: relative;
+            margin-top: 10px;
+            right: 0;
+            width: 100%;
+          }
+        }
+      }
+
+      &.w50 {
+        flex: 0 0 50%;
+
+        @include r(767) {
+          flex: 0 0 100%;
+        }
+      }
+    }
+
+    &-fields {
+      display: flex;
+      align-items: flex-start;
+      margin: 0 -17px;
+    }
+
+    &-field {
+      flex: 0 0 50%;
+      padding: 0 17px;
+    }
+  }
+}

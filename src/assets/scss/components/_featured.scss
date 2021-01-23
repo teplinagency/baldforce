@@ -1,0 +1,41 @@
+.featured {
+
+  &__content {
+    padding: 100px 0 300px 0;
+    @include r(970) {
+      padding: 75px 0 100px 0;
+    }
+  }
+
+  &__inners {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px -20px 0 -20px;
+    flex-wrap: wrap;
+
+    @include r(767) {
+      margin: 10px -10px 0 -10px;
+    }
+  }
+
+  &__inner {
+    flex: 0 0 auto;
+    padding: 20px;
+
+    @include r(767) {
+      flex: 0 0 50%;
+      padding: 10px;
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+
+        @include r(500) {
+          max-width: 60%;
+        }
+      }
+    }
+  }
+}

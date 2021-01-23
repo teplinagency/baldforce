@@ -1,0 +1,128 @@
+.btn-white {
+  display: block;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  background-color: #fff;
+  font-family: Teko;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 38px;
+  text-transform: uppercase;
+  color: #000;
+  border: 2px solid #fff;
+  transition-property: background-color, color;
+  transition-duration: .3s;
+
+  @include r(970) {
+    font-size: 30px;
+    height: 66px;
+    line-height: 66px;
+  }
+
+  &:hover {
+    background-color: transparent;
+    color: #fff;
+  }
+}
+.btn-white-border {
+  display: block;
+  width: 100%;
+  height: 70px;
+  line-height: 68px;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  background-color: transparent;
+  font-family: Neue Montreal;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid #fff;
+  transition-property: background-color, color;
+  transition-duration: .3s;
+
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+.btn-arrow {
+  display: inline-block;
+  position: relative;
+  font-family: Neue Montreal;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  padding: 16px 60px 16px 0;
+  border-bottom: 2px solid #fff;
+
+  @include r(1600) {
+    font-size: 18px;
+  }
+  @include r(1023) {
+    font-size: 16px;
+  }
+
+  &::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: {
+      color: #fff;
+      image: url("#{$images-path}/icon-right-arrow.svg");
+      repeat: no-repeat;
+      position: center;
+    }
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    transition-property: opacity;
+    transition-duration: .3s;
+  }
+  &::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    background: {
+      color: transparent;
+      image: url("#{$images-path}/icon-right-arrow-white.svg");
+      repeat: no-repeat;
+      position: center;
+    }
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: .3s;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0;
+    }
+    &::after {
+      opacity: 1;
+    }
+  }
+}

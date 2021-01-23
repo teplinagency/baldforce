@@ -1,0 +1,323 @@
+.subscription {
+  &__content {
+    padding: 200px 0 165px 0;
+
+    @include r(970) {
+      padding: 125px 0 75px 0;
+    }
+  }
+
+  &__title {
+    padding-right: 100px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 151px;
+      height: 151px;
+      background: {
+        image: url("#{$images-path}/icon-save-20.svg");
+        repeat: no-repeat;
+        size: contain;
+      }
+      right: 0;
+      top: -34px;
+      @include r(970) {
+        display: none;
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 400px;
+    right: 0;
+    width: 53vw;
+    height: 700px;
+    background: {
+      repeat: no-repeat;
+      size: cover;
+      position: center;
+    }
+
+    @include r(1600) {
+      height: 620px;
+    }
+    @include r(1440) {
+      height: 565px;
+    }
+    @include r(1400) {
+      height: 550px;
+    }
+    @include r(1100) {
+      width: 50vw;
+    }
+    @include r(1023) {
+      height: 470px;
+    }
+    @include r(970) {
+      position: relative;
+      margin-top: 70px;
+      top: 0;
+      width: calc(100% + 20px);
+      height: 500px;
+      &::after {
+        position: absolute;
+        content: '';
+        width: 100px;
+        height: 100px;
+        background: {
+          image: url("#{$images-path}/icon-save-20.svg");
+          repeat: no-repeat;
+          size: contain;
+        }
+        right: 10px;
+        top: -50px;
+      }
+    }
+    @include r(767) {
+      width: calc(100% + 16px);
+    }
+    @include r(700) {
+      height: 450px;
+    }
+  }
+
+  &__free {
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    transform: rotate(15deg);
+    text-align: center;
+    padding: 57px 10px;
+    width: 174px;
+    height: 174px;
+    border-radius: 50%;
+    z-index: 2;
+
+    @include r(1200) {
+      left: 20px;
+    }
+
+    @include r(1023) {
+      width: 100px;
+      height: 100px;
+      padding: 24px 2px;
+    }
+    @include r(970) {
+      transform: none;
+      left: 20px;
+      bottom: -30px;
+    }
+
+    span {
+      display: block;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      text-transform: uppercase;
+      color: rgba(#fff, .5);
+      @include r(1023) {
+        font-size: 12px;
+      }
+    }
+
+    strong {
+      display: block;
+      margin-top: 5px;
+      font-family: Teko;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: .8;
+      text-align: center;
+      text-transform: uppercase;
+      color: #fff;
+      @include r(1023) {
+        font-size: 26px;
+      }
+    }
+  }
+
+  &__holder {
+    display: block;
+    max-width: 380px;
+    margin-top: 180px;
+
+    @include r(1440) {
+      margin-top: 140px;
+    }
+    @include r(1100) {
+      margin-top: 80px;
+    }
+    @include r(1100) {
+      max-width: 100%;
+      margin-top: 70px;
+    }
+  }
+
+  &__start {
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 60px;
+    color: rgba(#fff, .3);
+
+    @include r(1600) {
+      font-size: 44px;
+    }
+    @include r(1440) {
+      font-size: 42px;
+    }
+    @include r(1023) {
+      font-size: 40px;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 20px;
+
+    strong {
+      font-family: Teko;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 65.5172px;
+      line-height: .94;
+      color: #fff;
+    }
+
+    span {
+      position: relative;
+      display: inline-block;
+      margin-left: 10px;
+      top: -11px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 1.2;
+      color: #fff;
+    }
+  }
+
+  &__description {
+    margin-top: 25px;
+    line-height: 1.4;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80px;
+    width: 100%;
+    max-width: 380px;
+    margin-top: 58px;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    background-color: #fff;
+    border: 2px solid #fff;
+    transition-property: background-color;
+    transition-duration: .3s;
+
+    &:hover {
+      background-color: transparent;
+
+      strong {
+        color: #fff;
+      }
+
+      span.save {
+        color: rgba(#fff, .5);
+      }
+
+      span.line {
+        background-color: rgba(#fff, 0.1);
+      }
+    }
+
+    strong {
+      position: relative;
+      top: 3px;
+      font-family: Teko;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 38px;
+      line-height: 1;
+      text-transform: uppercase;
+      color: #000;
+      transition-property: color;
+      transition-duration: .3s;
+    }
+
+    span.line {
+      background-color: rgba(0, 0, 0, 0.1);
+      width: 1px;
+      height: 28px;
+    }
+
+    span.save {
+      font-family: Neue Montreal;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 1;
+      color: rgba(#171717, .5);
+      transition-property: color;
+      transition-duration: .3s;
+    }
+  }
+
+  .link-arrow {
+    margin-top: 48px;
+  }
+
+  &__inners {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 180px -10px 0 -10px;
+
+    @include r(1600) {
+      margin-top: 160px;
+    }
+    @include r(1440) {
+      margin-top: 140px;
+    }
+    @include r(1023) {
+     margin: 100px 0 0 0;
+    }
+  }
+
+  &__inner {
+    flex: 0 0 auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    @include r(1023) {
+      padding: 14px 0;
+    }
+
+    img {
+      flex: 0 0 auto;
+      width: 22px;
+    }
+
+    p {
+      text-transform: uppercase;
+      color: #fff;
+      margin-left: 12px;
+    }
+  }
+}

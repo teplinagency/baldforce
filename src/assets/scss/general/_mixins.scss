@@ -1,0 +1,8 @@
+@mixin r($width) {
+	@media only screen and (max-width: "#{$width}px") {
+		@content;
+	}
+}
+@function to-rem($value) {
+	@return #{$value / 18px}rem;
+}
