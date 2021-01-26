@@ -22,7 +22,7 @@
         <div class="header__burger"></div>
         <a href="read.html" class="header__link">Read</a>
         <a href="faq.html" class="header__link">FAQ</a>
-        <a href="index.html" class="header__logo">
+        <a href="/" class="header__logo">
             <img src="images/logo.svg" alt="">
         </a>
         <a href="product.html" class="header__link">shop</a>
@@ -30,8 +30,8 @@
         <div class="header__languages custom-select">
             <select name="" id="">
                 <option value="">EN</option>
-                <option value="">ND</option>
-                <option value="">DB</option>
+                <option value="">NL</option>
+                <option value="">DE</option>
                 <option value="">FR</option>
                 <option value="">IT</option>
                 <option value="">ES</option>
@@ -42,6 +42,10 @@
 
     <nav class="navigation">
         <ul class="navigation__items">
+            <li>
+                <a href="/">Home</a>
+                <div class="navigation__image" style="background-image: url('images/hero-image.jpg');"></div>
+            </li>
             <li>
                 <a href="our-story.html">Our Story</a>
                 <div class="navigation__image" style="background-image: url('images/item-menu-1.jpg');"></div>
@@ -71,6 +75,7 @@
                 <div class="navigation__image" style="background-image: url('images/item-menu-7.jpg');"></div>
             </li>
         </ul>
+        <a href="#" class="link-arrow is-login">Login</a>
     </nav>
 
     <ul class="social">
@@ -92,12 +97,7 @@
     </ul>
 
     <section class="hero">
-        <div class="hero__slider swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-image: url('images/hero-image.jpg');"></div>
-                <div class="swiper-slide" style="background-image: url('images/image-about-us.jpg');"></div>
-            </div>
-        </div>
+        <div class="hero__image" style="background-image: url('images/hero-image.jpg');"></div>
         <div class="container">
             <div class="hero__content">
                 <h1>Join the Force</h1>
@@ -264,34 +264,10 @@
             <div class="subscribe__content">
                 <div class="subscribe__holder">
                     <div class="subscribe__title">
-                        <div class="content">
-                            <svg class="distort" width="350" height="450" viewBox="0 0 350 450">
-                                <filter id="distortionFilter">
-                                    <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="5" seed="2"
-                                                  stitchTiles="noStitch" x="0%" y="0%" width="100%" height="100%"
-                                                  result="noise"/>
-                                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R"
-                                                       yChannelSelector="B" x="0%" y="0%" width="100%" height="100%"
-                                                       filterUnits="userSpaceOnUse"/>
-                                </filter>
-                                <g filter="url(#distortionFilter)">
-                                    <image class="distort__img" x="50" y="50" xlink:href="images/image-animation.jpg"
-                                           height="350" width="250"/>
-                                    <image class="distort__img" x="50" y="50" xlink:href="images/image-animation.jpg"
-                                           height="350" width="250"/>
-                                    <image class="distort__img" x="50" y="50" xlink:href="images/image-animation.jpg"
-                                           height="350" width="250"/>
-                                    <image class="distort__img" x="50" y="50" xlink:href="images/image-animation.jpg"
-                                           height="350" width="250"/>
-                                </g>
-                            </svg>
-                            <blockquote class="text-lg quote">TRY
-                                <a href="#" class="quote__link">OUR</a> MOISTURISER
-                                <a href="#" class="quote__link">THE</a> FIRST 3 <a href="#"
-                                                                                   class="quote__link">MONTHS</a>
-                                JUST <a href="#" class="quote__link">FOR</a> €13,99
-                            </blockquote>
-                        </div>
+                        <h2 class="text-lg">TRY
+                            <div class="txt-animation">OUR MOISTURISER</div>
+                            THE FIRST 3 MONTHS JUST FOR €13,99
+                        </h2>
                         <div class="subscribe__free">
                             <span>1 bottle</span>
                             <strong>for Free</strong>
@@ -325,19 +301,19 @@
                         <div class="footer__inner footer__inner--menu">
                             <ul class="footer__menu">
                                 <li>
-                                    <a href="#">about</a>
+                                    <a href="our-story.html">about</a>
                                 </li>
                                 <li>
-                                    <a href="#">shop</a>
+                                    <a href="product.html">shop</a>
                                 </li>
                                 <li>
-                                    <a href="#">DELIVERY & RETURNS</a>
+                                    <a href="delivery.html">DELIVERY & RETURNS</a>
                                 </li>
                                 <li>
-                                    <a href="#">CONTACT</a>
+                                    <a href="contacts.html">CONTACT</a>
                                 </li>
                                 <li>
-                                    <a href="#">SUBScRIBE</a>
+                                    <a href="subscription.html">SUBSCRIBE</a>
                                 </li>
                             </ul>
                         </div>
@@ -358,7 +334,7 @@
                                 <li>
                                     <a href="#">
                                         <img src="images/icon-netherlands.svg" alt="">
-                                        <span>ND</span>
+                                        <span>NL</span>
                                     </a>
                                 </li>
                                 <li>
@@ -370,7 +346,7 @@
                                 <li>
                                     <a href="#">
                                         <img src="images/icon-germany.svg" alt="">
-                                        <span>Db</span>
+                                        <span>DE</span>
                                     </a>
                                 </li>
                                 <li>

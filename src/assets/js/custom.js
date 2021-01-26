@@ -91,13 +91,8 @@ $(document).ready(function () {
 
     $('.is-login').click(function () {
         $('.popup--login, .overlay').fadeIn(400);
-        return false;
-    });
-
-    $('.is-sign-up').click(function () {
         $('.header__burger').removeClass('is-open');
-        $('.navigation').removeClass('is-open');
-        $('.popup--login, .overlay').fadeIn(400);
+        $('body').toggleClass('is-open-menu');
         return false;
     });
 
@@ -126,6 +121,21 @@ $(document).ready(function () {
         $(this).addClass('is-open');
         $(openEl).addClass('is-open');
 
+    });
+
+    $('.button-minus').click(function () {
+        var $input = $(this).parent().find('input');
+        var count = parseInt($input.val()) - 1;
+        count = count < 1 ? 1 : count;
+        $input.val(count);
+        $input.change();
+        return false;
+    });
+    $('.button-plus').click(function () {
+        var $input = $(this).parent().find('input');
+        $input.val(parseInt($input.val()) + 1);
+        $input.change();
+        return false;
     });
 
     // accordion

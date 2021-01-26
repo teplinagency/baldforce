@@ -122,12 +122,17 @@
     margin-top: 50px;
   }
 
-  &__slider {
+  &__image {
     position: absolute;
     top: 160px;
     bottom: 0;
     width: 39vw;
     right: 0;
+    background: {
+      repeat: no-repeat;
+      size: cover;
+      position: center;
+    }
     @include r(1600) {
       width: 41vw;
     }
@@ -151,14 +156,6 @@
     }
     @include r(600) {
       height: 410px;
-    }
-
-    .swiper-slide {
-      background: {
-        repeat: no-repeat;
-        size: cover;
-        position: center;
-      }
     }
   }
 }

@@ -1,5 +1,6 @@
 .about-us {
   position: relative;
+  overflow-x: hidden;
 
   &__top {
     display: flex;
@@ -229,7 +230,6 @@
     height: 770px;
     background: {
       repeat: no-repeat;
-      attachment: fixed;
       position: center;
       size: cover;
     }

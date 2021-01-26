@@ -48,6 +48,15 @@
     padding: 130px 20px 20px 20px;
   }
 
+  .link-arrow {
+    margin-top: 40px;
+    display: none;
+
+    @include r(1023) {
+      display: inline-flex;
+    }
+  }
+
   &__items {
     display: block;
     position: relative;
@@ -104,6 +113,7 @@
         color: #fff;
         transition-property: transform;
         transition: .3s;
+
 
         @include r(1700) {
           font-size: 80px;

@@ -109,6 +109,29 @@
     transition-property: border-bottom-color;
     transition-duration: .3s;
 
+    &:nth-child(2),&:nth-child(3) {
+      min-width: 250px;
+
+      @include r(1440) {
+        min-width: 230px;
+      }
+      @include r(1300) {
+        min-width: 215px;
+      }
+      @include r(1260) {
+        min-width: 200px;
+      }
+      @include r(1170) {
+        min-width: 180px;
+      }
+      @include r(1100) {
+        min-width: 160px;
+      }
+      @include r(1023) {
+        min-width: auto;
+      }
+    }
+
     @include r(1440) {
       line-height: 70px;
     }
@@ -195,7 +218,8 @@
     transition-duration: .3s;
 
     @include r(1600) {
-      font-size: 24px;
+      font-size: 23px;
+      max-width: 180px;
     }
     @include r(1300) {
       font-size: 22px;
@@ -228,11 +252,16 @@
       margin-left: 24px;
       position: relative;
       top: -2px;
+
+      @include r(1600) {
+        width: 27px;
+        height: 27px;
+        background-size: 13px;
+        margin-left: 20px;
+      }
       @include r(1300) {
         width: 26px;
         height: 26px;
-        margin-left: 20px;
-        background-size: 13px;
       }
       @include r(1023) {
         width: 20px;
@@ -254,7 +283,7 @@
     letter-spacing: 0.02em;
     text-transform: uppercase;
     color: #fff;
-    width: 130px;
+    width: 120px;
     flex: 0 0 auto;
     cursor: pointer;
     border-bottom: 1px solid rgba(#fff, .15);

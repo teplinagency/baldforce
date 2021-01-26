@@ -1,4 +1,5 @@
 .checkout {
+  overflow-x: hidden;
   &__content {
     padding: 200px 0 165px 0;
 
@@ -73,6 +74,89 @@
       display: flex;
       align-items: flex-start;
       margin-bottom: 20px;
+
+      &--center {
+        align-items: center;
+      }
+
+      .numbers {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #fff;
+        padding: 8px;
+        width: 125px;
+        height: 50px;
+
+        @include r(767) {
+          width: 106px;
+          height: 46px;
+        }
+
+        .button-minus {
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          background: {
+            image: url("#{$images-path}/icon-minus.svg");
+            repeat: no-repeat;
+            size: contain;
+            position: center;
+          }
+          cursor: pointer;
+          transition-property: opacity;
+          transition-duration: .3s;
+
+          &:hover {
+            opacity: .7;
+          }
+        }
+        .button-plus {
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          background: {
+            image: url("#{$images-path}/icon-plus.svg");
+            repeat: no-repeat;
+            size: contain;
+            position: center;
+          }
+          cursor: pointer;
+          transition-property: opacity;
+          transition-duration: .3s;
+
+          &:hover {
+            opacity: .7;
+          }
+        }
+
+        input {
+          background-color: transparent;
+          width: 50px;
+          height: 50px;
+          font-family: Neue Montreal;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 1;
+          letter-spacing: 0.02em;
+          text-transform: uppercase;
+          color: #fff;
+          text-align: center;
+
+          @include r(767) {
+            width: 46px;
+            height: 46px;
+            font-size: 16px;
+          }
+        }
+        .button-minus {
+          margin-right: 7px;
+        }
+        .button-plus {
+          margin-left: 7px;
+        }
+      }
 
       &:last-child {
         margin-bottom: 0;
