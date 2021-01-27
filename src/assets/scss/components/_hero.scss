@@ -19,6 +19,9 @@
       max-width: 100%;
       padding: 110px 0 75px 0;
     }
+    @include r(450) {
+      padding: 75px 0;
+    }
   }
 
   &__subtitle {
@@ -116,10 +119,17 @@
     @include r(1023) {
       margin-top: 36px;
     }
+    @include r(450) {
+      margin-top: 26px;
+      font-size: 16px !important;
+    }
   }
 
   .btn-arrow {
     margin-top: 50px;
+    @include r(450) {
+      margin-top: 26px;
+    }
   }
 
   &__image {
@@ -152,10 +162,14 @@
       height: 600px;
     }
     @include r(700) {
-      height: 500px;
+      height: 300px;
+      background-position: center bottom;
     }
-    @include r(600) {
-      height: 410px;
+    @include r(450) {
+      height: 200px;
+    }
+    @include r(400) {
+      height: 180px;
     }
   }
 }

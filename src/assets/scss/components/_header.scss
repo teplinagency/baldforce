@@ -297,6 +297,24 @@
       display: none;
     }
 
+    &--mob {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 59px;
+      line-height: 60px;
+      border-bottom: 0;
+
+      @include r(1023) {
+        display: block;
+      }
+      @include r(500) {
+        width: 90px;
+        font-size: 13px;
+      }
+    }
+
     &:hover {
       border-bottom-color: #fff;
     }
